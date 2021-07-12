@@ -173,7 +173,7 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 ### Unit tests 6
 
-:heavy_plus_sign: Empty fields should be handled
+:heavy_plus_sign: Empty fields should be handled :heavy_check_mark:
 
 :heavy_plus_sign: Empty fields should reveal the connected empty and numeric fields
 
@@ -186,3 +186,9 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 :warning: Check marking ending in test
 
 :warning: Check game end, when the marking is wrong
+
+:warning: Scenario 6 should be finished
+
+:warning: Adjacent field detection
+
+:warning: Automatic revealing steps
