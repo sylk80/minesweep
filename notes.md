@@ -151,8 +151,12 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 :heavy_plus_sign: All number fields should be revealed beside the marking :heavy_check_mark:
 
-:heavy_plus_sign: After clearing the fields properly message should be shown
+:heavy_plus_sign: After clearing the fields properly message should be shown :x: :heavy_check_mark:
 
 ### Technical Debts
 
 :warning: We are working with 3x3 table, table size should be an input
+
+:warning: Check marking ending in test
+
+:warning: Check game end, when the marking is wrong
