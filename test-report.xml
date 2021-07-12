@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/sylk/IdeaProjects/xpfarm/minesweep/__tests__/minesweep_test.js">
-    <testCase name="Minesweeper game should... start with... a displayed output" duration="12"/>
+    <testCase name="Minesweeper game should... start with... a displayed output" duration="11"/>
     <testCase name="Minesweeper game should... start with... which is an empty table" duration="1"/>
     <testCase name="Minesweeper game should... start with... and has a start message" duration="1"/>
-    <testCase name="Minesweeper game should... support user(bot) movements, so ... steps can be made by the user(bot)" duration="1">
-      <failure message="TypeError: result.step is not a function"><![CDATA[TypeError: result.step is not a function
-    at Object.<anonymous> (/home/sylk/IdeaProjects/xpfarm/minesweep/__tests__/minesweep_test.js:24:20)
-    at Object.asyncJestTest (/home/sylk/IdeaProjects/xpfarm/minesweep/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
-    at /home/sylk/IdeaProjects/xpfarm/minesweep/node_modules/jest-jasmine2/build/queueRunner.js:45:12
-    at new Promise (<anonymous>)
-    at mapper (/home/sylk/IdeaProjects/xpfarm/minesweep/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
-    at /home/sylk/IdeaProjects/xpfarm/minesweep/node_modules/jest-jasmine2/build/queueRunner.js:75:41
-    at processTicksAndRejections (internal/process/task_queues.js:97:5)]]></failure>
-    </testCase>
+    <testCase name="Minesweeper game should... support user(bot) movements, so ... steps can be made by the user(bot)" duration="1"/>
   </file>
 </testExecutions>

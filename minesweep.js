@@ -1,52 +1,55 @@
-const minesweeper = () => {
-    const cellStart = "|"
-    const userTable = [
-        [" ", " ", " "],
-        [" ", " ", " "],
-        [" ", " ", " "],
-    ]
-    const messageStart = " [Minesweeper 3x3] Game Created"
-    const NEW_ROW = "\n"
+class Minesweeper {
+    constructor() {
+        this.cellStart = "|"
+        this.userTable = [
+            [" ", " ", " "],
+            [" ", " ", " "],
+            [" ", " ", " "],
+        ]
+        this.messageStart = " [Minesweeper 3x3] Game Created"
+        this.NEW_ROW = "\n"
+    }
 
-    const drawUserTable = (table) => {
-        let drawnTable = addNewRow()
+    drawUserTable(table) {
+        let drawnTable = this.addNewRow()
         for (let indexY = 0; indexY < 3; indexY++) {
-            drawnTable = drawRows(table, indexY, drawnTable)
+            drawnTable = this.drawRows(table, indexY, drawnTable)
         }
         return drawnTable
     }
 
-    const drawRows = (table, indexY, drawnTable) => {
-        drawnTable += cellStart
+    drawRows(table, indexY, drawnTable) {
+        drawnTable += this.cellStart
         for (let indexX = 0; indexX < 3; indexX++) {
             drawnTable += table[indexY][indexX]
-            drawnTable += addCellEnding(indexX)
+            drawnTable += this.addCellEnding(indexX)
         }
-        drawnTable += addNewRow()
+        drawnTable += this.addNewRow()
         return drawnTable
     }
 
-    const addNewRow = () => {
-        return "+-+-+-+" + NEW_ROW
+    addNewRow() {
+        return "+-+-+-+" + this.NEW_ROW
     }
 
-    const addCellEnding = (indexX) => {
-        return indexX < 2 ? cellStart : cellStart + NEW_ROW
+    addCellEnding(indexX) {
+        return indexX < 2 ? this.cellStart : this.cellStart + this.NEW_ROW
     }
 
-    const init = () => {
-        let result = drawUserTable(userTable)
-        result += NEW_ROW
-        result += messageStart
+    init() {
+        let result = this.drawUserTable(this.userTable)
+        result += this.NEW_ROW
+        result += this.messageStart
         console.log(result)
         return result
     }
 
-    /*    const step = (stepX, stepY) => {
-        userTable[stepY][stepY] = "*";
-    }*/
-
-    return init()
+    step(stepX, stepY) {
+        this.userTable[stepY][stepY] = "*"
+        const result = this.drawUserTable(this.userTable)
+        console.log(result)
+        return result
+    }
 }
 
-module.exports = minesweeper
+module.exports = Minesweeper
