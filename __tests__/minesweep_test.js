@@ -61,6 +61,18 @@ describe('Minesweeper game should...', function() {
             let result = minesweep.step(1,1);
             expect(result).toContain(" [Minesweeper 3x3] BOOM!  - Game Over");
         });
-        
+    });
+    describe('support user(bot) bomb discovery, so ...', function() {
+        it('number of bombs are shown when the user(bot) click on a field with numbers', function() {
+            let bombTable = [
+                ["3", "X", " "],
+                ["X", "X", " "],
+                [" ", " ", " "],
+            ]
+            let minesweep = new Minesweeper();
+            minesweep.setBombs(bombTable);
+            let result = minesweep.step(0,0);
+            expect(result).not.toContain('X');
+        });
     });
 });
