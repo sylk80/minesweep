@@ -13,6 +13,7 @@ class Minesweeper {
         ]
         this.messageStart = " [Minesweeper 3x3] Game Created"
         this.NEW_ROW = "\n"
+        this.BOMB = "X"
     }
 
     drawUserTable(table) {
@@ -43,16 +44,17 @@ class Minesweeper {
 
     init() {
         let result = this.drawUserTable(this.userTable)
-        result += this.NEW_ROW
-        result += this.messageStart
+        result += this.addFooter(result)
         console.log(result)
         return result
     }
 
     step(stepX, stepY) {
-        const value = this.bombTable[stepY][stepY]
-        this.userTable[stepY][stepY] = value
-        const result = this.drawUserTable(this.userTable)
+        const stepValue = this.bombTable[stepY][stepY]
+        this.userTable[stepY][stepY] = stepValue
+        let result = this.drawUserTable(this.userTable)
+        this.validateStep(stepValue)
+        result += this.addFooter(result)
         console.log(result)
         return result
     }
@@ -60,6 +62,18 @@ class Minesweeper {
     setBombs(bombTable) {
         this.bombTable = bombTable
         return this.bombTable
+    }
+
+    validateStep(value) {
+        if (value === this.BOMB) {
+            this.messageStart = " [Minesweeper 3x3] BOOM!  - Game Over"
+        }
+    }
+
+    addFooter(result) {
+        result += this.NEW_ROW
+        result += this.messageStart
+        return result
     }
 }
 
