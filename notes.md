@@ -147,7 +147,7 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 ### Unit tests 5
 
-:heavy_plus_sign: When clicking a field next to marking it should reveal a single new number only
+:heavy_plus_sign: When clicking a field next to marking it should reveal a single new number only :x: :heavy_check_mark:
 
 :heavy_plus_sign: All number fields should be revealed beside the marking
 
