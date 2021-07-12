@@ -73,7 +73,33 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 :heavy_plus_sign: Bomb should be displayed :warning:
 
-:heavy_plus_sign: A game over message has to be added
+:heavy_plus_sign: A game over message has to be added :x: :heavy_check_mark:
+
+---
+
+### User Scenario 3
+
+:radio_button: As a game user(bot)
+
+:arrow_right: I want the to see the number of bombs if I step on a field, which contains no bombs
+
+:arrow_left: So that I could mark the bombs according to the number
+
+### User acceptance test 3
+
+:heavy_plus_sign: Given three bomb around the [0,0] corner
+
+:construction: When the user clicks on the particular [0,0] corner
+
+:heavy_exclamation_mark: Then the number 3 is shown, and the game goes on
+
+### Unit tests 3
+
+:heavy_plus_sign: Bomb numbers should be available
+
+:heavy_plus_sign: Numbers should be shown
+
+:heavy_plus_sign: a warning should be displayed in status field
 
 ### Technical Debts
 
