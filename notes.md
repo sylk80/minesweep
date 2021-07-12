@@ -43,6 +43,8 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 :heavy_plus_sign: Table should be empty in content :x: :heavy_check_mark:
 
-:heavy_plus_sign: A start message has to be added
+:heavy_plus_sign: A start message has to be added :x: :heavy_check_mark:
 
 ### Technical Debts
+
+:warning: We are working with 3x3 table, table size should be an input
