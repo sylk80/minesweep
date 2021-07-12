@@ -51,8 +51,8 @@ class Minesweeper {
     }
 
     step(stepX, stepY) {
-        const stepValue = this.bombTable[stepY][stepY]
-        this.userTable[stepY][stepY] = stepValue
+        const stepValue = this.bombTable[stepY][stepX]
+        this.userTable[stepY][stepX] = stepValue
         let result = this.drawUserTable(this.userTable)
         this.validateStep(stepValue)
         result = this.addFooter(result)
