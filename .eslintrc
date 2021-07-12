@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended","google","prettier"],
+  "parserOptions": {
+    "ecmaVersion": 12
+  },
+  "plugins": ["prettier"],
+  "rules": {
+  "prettier/prettier": "error",
+  "complexity": ["error", { "max": 3 }],
+  "require-jsdoc": "off"
+  },
+  "ignorePatterns" : [
+    ",./*.config.js",
+	"*_test.js"
+  ]
+}

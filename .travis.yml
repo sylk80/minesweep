@@ -1,0 +1,17 @@
+ language: node_js
+node_js:
+  - 12
+
+addons:
+  sonarcloud:
+    organization: "sylk80"
+    token:
+      secure: "Ll+h3LkBl8qDgO45geaJkdQtXULcThqUDTkbcHXAHM8svMFKR/VyV8OVhldqD5L4I28lowEWMgXlFgT4Ctg2kJQHp8L4/xe0oLa9cjL4yfMy6oY9cuMgHicap5aOLl14IphdEO9+IxnTheWczhaGF4vpYeELWDKFxz9ZvoTob+TAurI/yu5T7iLX1dF/kPFbRZi91ft6g081UQVcJJ0sH0Hi7nd994gDMyd2d2z5IHd46iYdUu2UKLJc2LRtuVR+Nvt+43LNPG7O6tHpWlsScRqTbVoAyFRgfx97D51fp7GjMclMqGD/c1/NUAmQiixhVz8fkd1wh8b/xUa0QIkao4h9VZP3rfXtp1O/0CzKvYQQO2RcGAakmIJmVycZTULmWrKT1Kt6OI8cV+H4rTl6kPPZbZFXmCkC/vGnh7YobL27HZIMYbvTvbZQ909j+X179XTgaNe81ZYcNDh5emV5iCIjXDXEy3PulgZGGFSDouDwAN01bdYQP6fU/duBcmv+kmvYgvPqU6I5fwv8XZT2q29ZMvaZ+IE9jRwAzxkD/WSrWCUKH1RGjab0X4c+0hlUoNxHmjqyW79JmR5nzxocW/g7a6mD8pTuBy0UbdovtFpbDv7Ov/s11n4r/IoR6jAQrP+pKmb/CuFhgCSKI6xsAtXi0tr9r9LpYa82fqGXoII="
+
+
+before_install:
+  - npm i -g npm@7.12.1
+script:
+  - npm run coverage
+  - npm run lint
+  - sonar-scanner
