@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/sylk/IdeaProjects/xpfarm/minesweep/__tests__/minesweep_test.js">
-    <testCase name="Minesweeper game should... start with... a displayed output" duration="14"/>
+    <testCase name="Minesweeper game should... start with... a displayed output" duration="10"/>
     <testCase name="Minesweeper game should... start with... which is an empty table" duration="1"/>
     <testCase name="Minesweeper game should... start with... and has a start message" duration="0"/>
     <testCase name="Minesweeper game should... support user(bot) movements, so ... steps can be made by the user(bot)" duration="0"/>
-    <testCase name="Minesweeper game should... support user(bot) movements, so ... bombs should be set by a bot, 3rd party logic" duration="0"/>
-    <testCase name="Minesweeper game should... support user(bot) movements, so ... changes caused by steps should work" duration="1"/>
+    <testCase name="Minesweeper game should... support user(bot) movements, so ... bombs should be set by a bot, 3rd party logic" duration="1"/>
+    <testCase name="Minesweeper game should... support user(bot) movements, so ... changes caused by steps should work" duration="0"/>
     <testCase name="Minesweeper game should... support user(bot) movements, so ... game over message should be shown" duration="0"/>
     <testCase name="Minesweeper game should... support user(bot) bomb discovery, so ... number of bombs are shown when the user(bot) click on a field with numbers" duration="1"/>
     <testCase name="Minesweeper game should... support user(bot) bomb discovery, so ... number of bombs are shown when the user(bot) click on a field with numbers" duration="1"/>
     <testCase name="Minesweeper game should... support user(bot) bomb discovery, so ... warning should be displayed in status field about number of bombs" duration="1"/>
     <testCase name="Minesweeper game should... support user(bot) bomb avoiding strategy, so ... bomb marking should be made available to user " duration="1"/>
     <testCase name="Minesweeper game should... support user(bot) bomb avoiding strategy, so ... bomb markings should be made by usershould be shown " duration="2"/>
+    <testCase name="Minesweeper game should... support user(bot) bomb avoiding strategy, so ... bomb warning should be made displayed after marking was done " duration="3">
+      <failure message="Error: expect(received).toContain(expected) // indexOf"><![CDATA[Error: expect(received).toContain(expected) // indexOf
+
+Expected substring: "Square flagged as bomb"
+Received string:    "+-+-+-+
+|3|*| |
++-+-+-+
+| | | |
++-+-+-+
+| | | |
++-+-+-+
+"
+    at Object.<anonymous> (/home/sylk/IdeaProjects/xpfarm/minesweep/__tests__/minesweep_test.js:137:28)
+    at Object.asyncJestTest (/home/sylk/IdeaProjects/xpfarm/minesweep/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /home/sylk/IdeaProjects/xpfarm/minesweep/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (<anonymous>)
+    at mapper (/home/sylk/IdeaProjects/xpfarm/minesweep/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /home/sylk/IdeaProjects/xpfarm/minesweep/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)]]></failure>
+    </testCase>
   </file>
 </testExecutions>

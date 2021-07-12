@@ -124,5 +124,17 @@ describe('Minesweeper game should...', function() {
             let result = minesweep.mark(1,1)
             expect(result).toContain("+-+-+-+\n|3|*| |\n+-+-+-+\n|*|*| |\n+-+-+-+\n| | | |\n+-+-+-+\n");
         });
+        it('bomb warning should be made displayed after marking was done ', function() {
+            let bombTable = [
+                ["3", "X", " "],
+                ["X", "X", " "],
+                [" ", " ", " "],
+            ]
+            let minesweep = new Minesweeper();
+            minesweep.setBombs(bombTable);
+            minesweep.step(0,0);
+            let result = minesweep.mark(1,0);
+            expect(result).toContain("Square flagged as bomb");
+        });
     });
 });

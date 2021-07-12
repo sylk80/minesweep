@@ -123,7 +123,7 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 :heavy_plus_sign: Marking should be available :x: :heavy_check_mark:
 
-:heavy_plus_sign: Markings should be shown
+:heavy_plus_sign: Markings should be shown :heavy_check_mark:
 
 :heavy_plus_sign: Marking should be noted in the status field x:
 
