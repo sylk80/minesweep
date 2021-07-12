@@ -39,5 +39,16 @@ describe('Minesweeper game should...', function() {
             let result = minesweep.setBombs(bombTable);
             expect(result).not.toBeNull();
         });
+        it('changes caused by steps should work', function() {
+            let bombTable = [
+                [" ", " ", " "],
+                [" ", "X", " "],
+                [" ", " ", " "],
+            ]
+            let minesweep = new Minesweeper();
+            minesweep.setBombs(bombTable);
+            let result = minesweep.step(1,1);
+            expect(result).toContain("X");
+        });
     });
 });
