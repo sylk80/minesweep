@@ -14,6 +14,7 @@ class Minesweeper {
         this.messageStart = " [Minesweeper 3x3] Game Created"
         this.NEW_ROW = "\n"
         this.BOMB = "X"
+        this.MARK = "*"
     }
 
     drawUserTable(table) {
@@ -55,6 +56,13 @@ class Minesweeper {
         let result = this.drawUserTable(this.userTable)
         this.validateStep(stepValue)
         result += this.addFooter(result)
+        console.log(result)
+        return result
+    }
+
+    mark(stepX, stepY) {
+        this.userTable[stepY][stepX] = this.MARK
+        const result = this.drawUserTable(this.userTable)
         console.log(result)
         return result
     }
