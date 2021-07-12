@@ -151,7 +151,7 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 :heavy_plus_sign: All number fields should be revealed beside the marking
 
-:heavy_plus_sign: After clearing the fields message should be shown x:
+:heavy_plus_sign: After clearing the fields message should be shown
 
 ### Technical Debts
 

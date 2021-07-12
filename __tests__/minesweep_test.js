@@ -137,4 +137,21 @@ describe('Minesweeper game should...', function() {
             expect(result).toContain("Square flagged as bomb");
         });
     });
+    describe('support user\'s(bot) victory, so that ...', function() {
+        it('by clearing not discovered, non marked fields ', function() {
+            let bombTable = [
+                ["3", "X", "2"],
+                ["X", "X", "2"],
+                ["2", "2", "1"],
+            ]
+            let minesweep = new Minesweeper();
+            minesweep.setBombs(bombTable);
+            minesweep.step(0,0);
+            minesweep.mark(1,0);
+            minesweep.mark(0,1);
+            minesweep.mark(1,1);
+            let result = minesweep.step(2,0);
+            expect(result).toContain(2);
+        });
+    });
 });
