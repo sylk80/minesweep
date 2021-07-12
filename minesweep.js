@@ -42,6 +42,10 @@ const minesweeper = () => {
         return result
     }
 
+    /*    const step = (stepX, stepY) => {
+        userTable[stepY][stepY] = "*";
+    }*/
+
     return init()
 }
 
