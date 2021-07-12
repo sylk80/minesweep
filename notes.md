@@ -45,6 +45,36 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 :heavy_plus_sign: A start message has to be added :x: :heavy_check_mark:
 
+---
+
+### User Scenario 2
+
+:radio_button: As a game user(bot)
+
+:arrow_right: I want the bomb, and a message shown when I step directly on the bomb as first step
+
+:arrow_left: So that the game can end with my defeat
+
+### User acceptance test 2
+
+:heavy_plus_sign: Given a bomb hidden in the middle field
+
+:construction: When the user clicks on the particular field
+
+:heavy_exclamation_mark: Then a bomb, and the game over message is shown
+
+### Unit tests 2
+
+:heavy_plus_sign: Steps should be available
+
+:heavy_plus_sign: Bomb setting should be available
+
+:heavy_plus_sign: Changes caused by step should work
+
+:heavy_plus_sign: Bomb should be displayed
+
+:heavy_plus_sign: A game over message has to be added
+
 ### Technical Debts
 
 :warning: We are working with 3x3 table, table size should be an input
