@@ -85,6 +85,16 @@ describe('Minesweeper game should...', function() {
             let result = minesweep.step(0,0);
             expect(result).toContain('3');
         });
-
+        it('warning should be displayed in status field about number of bombs', function() {
+            let bombTable = [
+                ["3", "X", " "],
+                ["X", "X", " "],
+                [" ", " ", " "],
+            ]
+            let minesweep = new Minesweeper();
+            minesweep.setBombs(bombTable);
+            let result = minesweep.step(0,0);
+            expect(result).toContain("3 bombs around your square");
+        });
     });
 });

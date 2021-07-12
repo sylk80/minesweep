@@ -97,7 +97,7 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 :heavy_plus_sign: Bomb numbers should be available :heavy_check_mark:
 
-:heavy_plus_sign: Numbers should be shown
+:heavy_plus_sign: Numbers should be shown :heavy_check_mark:
 
 :heavy_plus_sign: a warning should be displayed in status field
 
