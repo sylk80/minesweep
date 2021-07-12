@@ -18,4 +18,10 @@ describe('Minesweeper game should...', function() {
             expect(result).toContain(startMessage);
         });
     });
+    describe('support user(bot) movements, so ...', function() {
+        it('steps can be made by the user(bot)', function() {
+            let result = minesweeper.step(1,1);
+            expect(result).not.toBeNull();
+        });
+    });
 });
