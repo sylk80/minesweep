@@ -41,7 +41,7 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 :heavy_plus_sign: Output should be displayed :x: :heavy_check_mark:
 
-:heavy_plus_sign: Table should be empty in content
+:heavy_plus_sign: Table should be empty in content :x: :heavy_check_mark:
 
 :heavy_plus_sign: A start message has to be added
 
