@@ -9,22 +9,40 @@
 
 ### Description
 
-### Scenario 1
+Mine Sweeper - Game Rules:
+You are presented with a board of squares. Some squares contain mines (bombs), others don't. If you step
+on a square containing a bomb, you lose. If you manage to clear all the squares (without clicking on any
+bombs) you win.
+Clearing a square which doesn't have a bomb reveals the number of neighbouring squares containing bombs.
+If you guess a square contains a bomb mark it with a flag.
+A squares "neighbours" are the squares adjacent above, below, left, right, and all 4 diagonals. Squares on the
+sides of the board or in a corner have fewer neighbors. The board does not wrap around the edges. If you
+clear a square with 0 neighboring bombs, all its neighbors will automatically open; recursively.
+The first square you open could be a bomb.
+You don't have to mark all the bombs to win; you just need to open all non-bomb squares.
 
-:radio_button: As a
+### User Scenario 1
 
-:arrow_right: I want
+:radio_button: As a game user
 
-:arrow_left: So that
+:arrow_right: I want a clean board created at the beginning of the game
+
+:arrow_left: So that I can play mine sweeper
 
 ### User acceptance test 1
 
-:heavy_plus_sign: Given
+:heavy_plus_sign: Given no actual input from the user
 
-:construction: When
+:construction: When the minesweeper game starts
 
-:heavy_exclamation_mark: Then
+:heavy_exclamation_mark: Then an empty board is created with a start message
 
 ### Unit tests
+
+:heavy_plus_sign: Output should be displayed
+
+:heavy_plus_sign: Table should be empty in content
+
+:heavy_plus_sign: A start message has to be added
 
 ### Technical Debts
