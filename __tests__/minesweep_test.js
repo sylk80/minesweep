@@ -110,5 +110,19 @@ describe('Minesweeper game should...', function() {
             let result = minesweep.mark(1,0);
             expect(result).not.toBeNull();
         });
+        it('bomb markings should be made by usershould be shown ', function() {
+            let bombTable = [
+                ["3", "X", " "],
+                ["X", "X", " "],
+                [" ", " ", " "],
+            ]
+            let minesweep = new Minesweeper();
+            minesweep.setBombs(bombTable);
+            minesweep.step(0,0);
+            minesweep.mark(1,0);
+            minesweep.mark(0,1);
+            let result = minesweep.mark(1,1)
+            expect(result).toContain("+-+-+-+\n|3|*| |\n+-+-+-+\n|*|*| |\n+-+-+-+\n| | | |\n+-+-+-+\n");
+        });
     });
 });
