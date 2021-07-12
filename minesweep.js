@@ -50,7 +50,8 @@ class Minesweeper {
     }
 
     step(stepX, stepY) {
-        this.userTable[stepY][stepY] = "*"
+        const value = this.bombTable[stepY][stepY]
+        this.userTable[stepY][stepY] = value
         const result = this.drawUserTable(this.userTable)
         console.log(result)
         return result

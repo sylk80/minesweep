@@ -6,5 +6,6 @@
     <testCase name="Minesweeper game should... start with... and has a start message" duration="1"/>
     <testCase name="Minesweeper game should... support user(bot) movements, so ... steps can be made by the user(bot)" duration="1"/>
     <testCase name="Minesweeper game should... support user(bot) movements, so ... bombs should be set by a bot, 3rd party logic" duration="0"/>
+    <testCase name="Minesweeper game should... support user(bot) movements, so ... changes caused by steps should work" duration="1"/>
   </file>
 </testExecutions>
