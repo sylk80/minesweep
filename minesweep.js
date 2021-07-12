@@ -67,6 +67,9 @@ class Minesweeper {
     validateStep(value) {
         if (value === this.BOMB) {
             this.messageStart = " [Minesweeper 3x3] BOOM!  - Game Over"
+        } else {
+            this.messageStart =
+                " [Minesweeper 3x3] " + value + " bombs around your square"
         }
     }
 
