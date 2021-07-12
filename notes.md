@@ -125,7 +125,33 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 :heavy_plus_sign: Markings should be shown :heavy_check_mark:
 
-:heavy_plus_sign: Marking should be noted in the status field x:
+:heavy_plus_sign: Marking should be noted in the status field :x: :heavy_check_mark:
+
+---
+
+### User Scenario 5
+
+:radio_button: As a game user(bot)
+
+:arrow_right: I want the to clear all fields with marking and clicks
+
+:arrow_left: So that I would win the game
+
+### User acceptance test 5
+
+:heavy_plus_sign: Given all the cleared fields
+
+:construction: When the user marks the bombs correctly and discovers the rest of fields
+
+:heavy_exclamation_mark: Then the game should be won by the user
+
+### Unit tests 5
+
+:heavy_plus_sign: When clicking a field next to marking it should reveal a single new number only
+
+:heavy_plus_sign: All number fields should be revealed beside the marking
+
+:heavy_plus_sign: After clearing the fields message should be shown x:
 
 ### Technical Debts
 
