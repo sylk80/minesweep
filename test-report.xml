@@ -7,5 +7,25 @@
     <testCase name="Minesweeper game should... support user(bot) movements, so ... steps can be made by the user(bot)" duration="1"/>
     <testCase name="Minesweeper game should... support user(bot) movements, so ... bombs should be set by a bot, 3rd party logic" duration="0"/>
     <testCase name="Minesweeper game should... support user(bot) movements, so ... changes caused by steps should work" duration="1"/>
+    <testCase name="Minesweeper game should... support user(bot) movements, so ... game over message should be shown" duration="3">
+      <failure message="Error: expect(received).toContain(expected) // indexOf"><![CDATA[Error: expect(received).toContain(expected) // indexOf
+
+Expected substring: " [Minesweeper 3x3] BOOM!  - Game Over"
+Received string:    "+-+-+-+
+| | | |
++-+-+-+
+| |X| |
++-+-+-+
+| | | |
++-+-+-+
+"
+    at Object.<anonymous> (/home/sylk/IdeaProjects/xpfarm/minesweep/__tests__/minesweep_test.js:62:28)
+    at Object.asyncJestTest (/home/sylk/IdeaProjects/xpfarm/minesweep/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /home/sylk/IdeaProjects/xpfarm/minesweep/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (<anonymous>)
+    at mapper (/home/sylk/IdeaProjects/xpfarm/minesweep/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /home/sylk/IdeaProjects/xpfarm/minesweep/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)]]></failure>
+    </testCase>
   </file>
 </testExecutions>

@@ -69,9 +69,9 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 :heavy_plus_sign: Bomb setting should be available :x: :heavy_check_mark:
 
-:heavy_plus_sign: Changes caused by step should work
+:heavy_plus_sign: Changes caused by step should work :x: :heavy_check_mark:
 
-:heavy_plus_sign: Bomb should be displayed
+:heavy_plus_sign: Bomb should be displayed :warning:
 
 :heavy_plus_sign: A game over message has to be added
 

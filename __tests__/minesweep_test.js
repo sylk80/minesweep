@@ -50,5 +50,17 @@ describe('Minesweeper game should...', function() {
             let result = minesweep.step(1,1);
             expect(result).toContain("X");
         });
+        it('game over message should be shown', function() {
+            let bombTable = [
+                [" ", " ", " "],
+                [" ", "X", " "],
+                [" ", " ", " "],
+            ]
+            let minesweep = new Minesweeper();
+            minesweep.setBombs(bombTable);
+            let result = minesweep.step(1,1);
+            expect(result).toContain(" [Minesweeper 3x3] BOOM!  - Game Over");
+        });
+        
     });
 });
