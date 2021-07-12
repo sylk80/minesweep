@@ -99,7 +99,33 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 :heavy_plus_sign: Numbers should be shown :heavy_check_mark:
 
-:heavy_plus_sign: a warning should be displayed in status field
+:heavy_plus_sign: a warning should be displayed in status field :x: :heavy_check_mark:
+
+---
+
+### User Scenario 4
+
+:radio_button: As a game user(bot)
+
+:arrow_right: I want the to mark the bombs around a field, which contains a number only
+
+:arrow_left: So that I would avoid those fields later
+
+### User acceptance test 4
+
+:heavy_plus_sign: Given a discovered and displayed number in corner
+
+:construction: When the user wants to marks the fields around particular corner
+
+:heavy_exclamation_mark: Then the fields should be marked as bombs, nothing else should happen
+
+### Unit tests 4
+
+:heavy_plus_sign: Marking should be available
+
+:heavy_plus_sign: Markings should be shown
+
+:heavy_plus_sign: Marking should be noted in the status field x:
 
 ### Technical Debts
 
