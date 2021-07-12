@@ -97,4 +97,18 @@ describe('Minesweeper game should...', function() {
             expect(result).toContain("3 bombs around your square");
         });
     });
+    describe('support user(bot) bomb avoiding strategy, so ...', function() {
+        it('bomb marking should be made available to user ', function() {
+            let bombTable = [
+                ["3", "X", " "],
+                ["X", "X", " "],
+                [" ", " ", " "],
+            ]
+            let minesweep = new Minesweeper();
+            minesweep.setBombs(bombTable);
+            minesweep.step(0,0);
+            let result = minesweep.mark(1,0);
+            expect(result).not.toBeNull();
+        });
+    });
 });
