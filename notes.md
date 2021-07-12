@@ -153,6 +153,32 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 :heavy_plus_sign: After clearing the fields properly message should be shown :x: :heavy_check_mark:
 
+---
+
+### User Scenario 6
+
+:radio_button: As a game user(bot)
+
+:arrow_right: I want the see the adjacent fields cleared automatically if I click on an empty field
+
+:arrow_left: So that I could feel lucky when I click on an empty field
+
+### User acceptance test 6
+
+:heavy_plus_sign: Given empty fields in the bomb configuration and 1 bomb
+
+:construction: When the user clicks on the empty field
+
+:heavy_exclamation_mark: Then the all the connected empty and numeric fields are revealed, leaving only the bomb
+
+### Unit tests 6
+
+:heavy_plus_sign: Empty fields should be handled
+
+:heavy_plus_sign: Empty fields should reveal the connected empty and numeric fields
+
+:heavy_plus_sign: When only 1 covered bomb is not revealed, it should be considered a victory
+
 ### Technical Debts
 
 :warning: We are working with 3x3 table, table size should be an input
