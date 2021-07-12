@@ -65,7 +65,7 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 ### Unit tests 2
 
-:heavy_plus_sign: Steps should be available
+:heavy_plus_sign: Steps should be available :x: :heavy_check_mark: :hammer_and_pick:
 
 :heavy_plus_sign: Bomb setting should be available
 
