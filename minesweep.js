@@ -6,6 +6,11 @@ class Minesweeper {
             [" ", " ", " "],
             [" ", " ", " "],
         ]
+        this.bombTable = [
+            [" ", " ", " "],
+            [" ", " ", " "],
+            [" ", " ", " "],
+        ]
         this.messageStart = " [Minesweeper 3x3] Game Created"
         this.NEW_ROW = "\n"
     }
@@ -49,6 +54,11 @@ class Minesweeper {
         const result = this.drawUserTable(this.userTable)
         console.log(result)
         return result
+    }
+
+    setBombs(bombTable) {
+        this.bombTable = bombTable
+        return this.bombTable
     }
 }
 
