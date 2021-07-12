@@ -192,4 +192,17 @@ describe('Minesweeper game should...', function() {
             expect(result).toContain("the land is cleared! GOOD JOB!");
         });
     });
+    describe('support the discovery of empty fields,so  ...', function() {
+        it('when empty fields are clicked ', function() {
+            let bombTable = [
+                ["_", "1", "X"],
+                ["_", "1", "1"],
+                ["_", "_", "_"],
+            ]
+            let minesweep = new Minesweeper();
+            minesweep.setBombs(bombTable);
+            let result = minesweep.step(0,0);
+            expect(result).toContain('_');
+        });
+    });
 });

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/sylk/IdeaProjects/xpfarm/minesweep/__tests__/minesweep_test.js">
-    <testCase name="Minesweeper game should... start with... a displayed output" duration="13"/>
+    <testCase name="Minesweeper game should... start with... a displayed output" duration="16"/>
     <testCase name="Minesweeper game should... start with... which is an empty table" duration="1"/>
     <testCase name="Minesweeper game should... start with... and has a start message" duration="0"/>
-    <testCase name="Minesweeper game should... support user(bot) movements, so ... steps can be made by the user(bot)" duration="0"/>
+    <testCase name="Minesweeper game should... support user(bot) movements, so ... steps can be made by the user(bot)" duration="1"/>
     <testCase name="Minesweeper game should... support user(bot) movements, so ... bombs should be set by a bot, 3rd party logic" duration="1"/>
     <testCase name="Minesweeper game should... support user(bot) movements, so ... changes caused by steps should work" duration="0"/>
     <testCase name="Minesweeper game should... support user(bot) movements, so ... game over message should be shown" duration="1"/>
@@ -14,8 +14,9 @@
     <testCase name="Minesweeper game should... support user(bot) bomb avoiding strategy, so ... bomb marking should be made available to user " duration="1"/>
     <testCase name="Minesweeper game should... support user(bot) bomb avoiding strategy, so ... bomb markings should be made by usershould be shown " duration="2"/>
     <testCase name="Minesweeper game should... support user(bot) bomb avoiding strategy, so ... bomb warning should be made displayed after marking was done " duration="2"/>
-    <testCase name="Minesweeper game should... support user&apos;s(bot) victory, so that ... by clearing not discovered, non marked fields " duration="2"/>
+    <testCase name="Minesweeper game should... support user&apos;s(bot) victory, so that ... by clearing not discovered, non marked fields " duration="3"/>
     <testCase name="Minesweeper game should... support user&apos;s(bot) victory, so that ... all numbers could be cleared next to non marked fields " duration="5"/>
-    <testCase name="Minesweeper game should... support user&apos;s(bot) victory, so that ... after all numbers were cleared properly a congratulations should be shown " duration="5"/>
+    <testCase name="Minesweeper game should... support user&apos;s(bot) victory, so that ... after all numbers were cleared properly a congratulations should be shown " duration="4"/>
+    <testCase name="Minesweeper game should... support the discovery of empty fields,so  ... when empty fields are clicked " duration="1"/>
   </file>
 </testExecutions>
