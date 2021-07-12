@@ -62,7 +62,7 @@ class Minesweeper {
 
     mark(stepX, stepY) {
         this.userTable[stepY][stepX] = this.MARK
-        this.messageStart = " [Minesweeper 3x3] Square flagged as bomb"
+        this.validateStep(this.MARK)
         let result = this.drawUserTable(this.userTable)
         result = this.addFooter(result)
         console.log(result)
@@ -74,13 +74,89 @@ class Minesweeper {
         return this.bombTable
     }
 
-    validateStep(value) {
-        if (value === this.BOMB) {
+    validateStep(cellValue) {
+        if (cellValue === this.BOMB) {
             this.messageStart = " [Minesweeper 3x3] BOOM!  - Game Over"
         } else {
-            this.messageStart =
-                " [Minesweeper 3x3] " + value + " bombs around your square"
+            this.setNonFinishingStatus(cellValue)
         }
+    }
+
+    setNonFinishingStatus(cellValue) {
+        if (
+            this.checkEnding() &&
+            this.checkVictory(this.userTable, this.bombTable)
+        ) {
+            this.messageStart =
+                " [Minesweeper 3x3] the land is cleared! GOOD JOB!"
+        } else {
+            this.setStatusBasedOnValue(cellValue)
+        }
+    }
+
+    setStatusBasedOnValue(cellValue) {
+        if (cellValue === this.MARK) {
+            this.messageStart = " [Minesweeper 3x3] Square flagged as bomb"
+        } else {
+            this.messageStart =
+                " [Minesweeper 3x3] " + cellValue + " bombs around your square"
+        }
+    }
+
+    checkEnding() {
+        let finished = true
+        for (let indexY = 0; indexY < 2; indexY++) {
+            if (!this.checkRowEnding(indexY)) {
+                finished = false
+                break
+            }
+        }
+        return finished
+    }
+
+    checkRowEnding(indexY) {
+        let rowFinished = true
+        for (let indexX = 0; indexX < 3; indexX++) {
+            if (this.userTable[indexY][indexX] === " ") {
+                rowFinished = false
+                break
+            }
+        }
+        return rowFinished
+    }
+
+    checkVictory(userTable, bombTable) {
+        let sameValues = true
+        for (let indexY = 0; indexY < 3; indexY++) {
+            if (!this.checkRowsForSameValues(userTable, bombTable, indexY)) {
+                sameValues = false
+                break
+            }
+        }
+        return sameValues
+    }
+
+    checkRowsForSameValues(userTable, bombTable, indexY) {
+        let sameValuesInRows = true
+        for (let indexX = 0; indexX < 3; indexX++) {
+            if (
+                !this.checkCellForSameValue(
+                    userTable[indexY][indexX],
+                    bombTable[indexY][indexX]
+                )
+            ) {
+                sameValuesInRows = false
+                break
+            }
+        }
+        return sameValuesInRows
+    }
+
+    checkCellForSameValue(userCell, bombCell) {
+        return (
+            userCell !== " " &&
+            (userCell === bombCell || userCell.replace("*", "X") === bombCell)
+        )
     }
 
     addFooter(result) {
