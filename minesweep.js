@@ -45,7 +45,7 @@ class Minesweeper {
 
     init() {
         let result = this.drawUserTable(this.userTable)
-        result += this.addFooter(result)
+        result = this.addFooter(result)
         console.log(result)
         return result
     }
@@ -55,14 +55,16 @@ class Minesweeper {
         this.userTable[stepY][stepY] = stepValue
         let result = this.drawUserTable(this.userTable)
         this.validateStep(stepValue)
-        result += this.addFooter(result)
+        result = this.addFooter(result)
         console.log(result)
         return result
     }
 
     mark(stepX, stepY) {
         this.userTable[stepY][stepX] = this.MARK
-        const result = this.drawUserTable(this.userTable)
+        this.messageStart = " [Minesweeper 3x3] Square flagged as bomb"
+        let result = this.drawUserTable(this.userTable)
+        result = this.addFooter(result)
         console.log(result)
         return result
     }
