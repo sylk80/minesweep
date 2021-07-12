@@ -74,5 +74,17 @@ describe('Minesweeper game should...', function() {
             let result = minesweep.step(0,0);
             expect(result).not.toContain('X');
         });
+        it('number of bombs are shown when the user(bot) click on a field with numbers', function() {
+            let bombTable = [
+                ["3", "X", " "],
+                ["X", "X", " "],
+                [" ", " ", " "],
+            ]
+            let minesweep = new Minesweeper();
+            minesweep.setBombs(bombTable);
+            let result = minesweep.step(0,0);
+            expect(result).toContain('3');
+        });
+
     });
 });

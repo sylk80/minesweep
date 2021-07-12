@@ -95,7 +95,7 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 ### Unit tests 3
 
-:heavy_plus_sign: Bomb numbers should be available
+:heavy_plus_sign: Bomb numbers should be available :heavy_check_mark:
 
 :heavy_plus_sign: Numbers should be shown
 
