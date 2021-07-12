@@ -39,7 +39,7 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 ### Unit tests
 
-:heavy_plus_sign: Output should be displayed
+:heavy_plus_sign: Output should be displayed :x: :heavy_check_mark:
 
 :heavy_plus_sign: Table should be empty in content
 
