@@ -5,6 +5,8 @@ const minesweeper = () => {
         [" ", " ", " "],
         [" ", " ", " "],
     ]
+    const messageStart = " [Minesweeper 3x3] Game Created"
+    const NEW_ROW = "\n"
 
     const drawUserTable = (table) => {
         let drawnTable = addNewRow()
@@ -25,14 +27,22 @@ const minesweeper = () => {
     }
 
     const addNewRow = () => {
-        return "+-+-+-+\n"
+        return "+-+-+-+" + NEW_ROW
     }
 
     const addCellEnding = (indexX) => {
-        return indexX < 2 ? cellStart : cellStart + "\n"
+        return indexX < 2 ? cellStart : cellStart + NEW_ROW
     }
 
-    return drawUserTable(userTable)
+    const init = () => {
+        let result = drawUserTable(userTable)
+        result += NEW_ROW
+        result += messageStart
+        console.log(result)
+        return result
+    }
+
+    return init()
 }
 
 module.exports = minesweeper
