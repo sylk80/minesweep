@@ -172,5 +172,24 @@ describe('Minesweeper game should...', function() {
             let result = minesweep.step(1,2);
             expect(result).not.toContain("X");
         });
+        it('after all numbers were cleared properly a congratulations should be shown ', function() {
+            let bombTable = [
+                ["3", "X", "2"],
+                ["X", "X", "2"],
+                ["2", "2", "1"],
+            ]
+            let minesweep = new Minesweeper();
+            minesweep.setBombs(bombTable);
+            minesweep.step(0,0);
+            minesweep.mark(1,0);
+            minesweep.mark(0,1);
+            minesweep.mark(1,1);
+            minesweep.step(2,0);
+            minesweep.step(2,1);
+            minesweep.step(2,2);
+            minesweep.step(0,2);
+            let result = minesweep.step(1,2);
+            expect(result).toContain("the land is cleared! GOOD JOB!");
+        });
     });
 });

@@ -149,9 +149,9 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 :heavy_plus_sign: When clicking a field next to marking it should reveal a single new number only :x: :heavy_check_mark:
 
-:heavy_plus_sign: All number fields should be revealed beside the marking
+:heavy_plus_sign: All number fields should be revealed beside the marking :heavy_check_mark:
 
-:heavy_plus_sign: After clearing the fields message should be shown
+:heavy_plus_sign: After clearing the fields properly message should be shown
 
 ### Technical Debts
 
